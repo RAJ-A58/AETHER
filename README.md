@@ -59,6 +59,7 @@ To guarantee bank-grade zero-trust security without the transaction fees, comput
 AETHER/
 ├── docs/                               # Hackathon proposals, pitch decks & guides
 │   ├── README.md                       # Documentation index
+│   ├── PHYSICAL_ENTROPY_GENERATOR.md   # Zero-trust TRNG hardware & SIMD spec
 │   ├── Round_1_Idea_Submission_Deck.md # 6–8 Slide pitch deck for Round 1
 │   ├── Round_1_Submission_Proposal.md  # Detailed technical & economic proposal
 │   └── SciX India Hackathon.pdf        # Official event handbook
