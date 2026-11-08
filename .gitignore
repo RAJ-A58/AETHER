@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+*.dll
+*.obj
+*.o
+*.a
+*.lib
+
+# C++ Build & IDE
+build/
+bin/
+out/
+.vscode/
+.idea/
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+*.ninja
+.cache/
+
+# Node / Web UI
+node_modules/
+dist/
+.next/
+
+# Environments
+venv/
+.env
+*.env.local
+
+# Firmware
+.pio/
+.espressif/
+*.bin
+*.hex
+*.elf
+
+# Logs & OS Files
+*.log
+.DS_Store
+Thumbs.db
