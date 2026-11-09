@@ -16,7 +16,7 @@ To guarantee bank-grade zero-trust security without the transaction fees, comput
 ---
 
 ## 2. The Problem & Solution
-* **The Broken Economics of Net-Metering:** Prosumers dump excess solar power back to the state DISCOM at rock-bottom feed-in tariffs (e.g., **₹2.50/kWh**), while direct neighbors buy that exact electricity at premium peak rates (e.g., **₹8.00/kWh**).
+* **The Broken Economics of Net-Metering:** Prosumers dump excess solar power back to the state DISCOM at rock-bottom feed-in tariffs (e.g., **₹2.82/kWh**), while direct neighbors buy that exact electricity at premium peak rates (e.g., **₹10.50/kWh**).
 * **The AETHER Solution:** Autonomous edge nodes running Automated Market Maker (AMM) logic dynamically quote bids/asks into a Continuous Double Auction (CDA) matching engine. Energy is traded directly between neighbors at a fair clearing spot price (e.g., **₹5.50/kWh**), delivering a win-win: sellers earn **+120% more**, while buyers save **31%**. Solid-state relays physically steer the negotiated DC power across the micro-grid mesh.
 
 ---
