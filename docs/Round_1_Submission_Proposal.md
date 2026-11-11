@@ -37,10 +37,10 @@ Current academic and industrial P2P energy pilot projects face two critical flaw
 
 ### 3. The Proposed Solution
 Our system replaces static feed-in tariffs with an **autonomous localized commodities exchange** operating across physical hardware nodes:
-1. **Automated Market Makers (AMM) on the Edge:** Each household is equipped with an ESP32 trading node paired with an INA219 bidirectional power sensor. The node evaluates its internal battery state; if power falls below a threshold (e.g., SoC < 40%), it acts as a buyer. If excess solar is available, it acts as a seller. Bids/asks are priced dynamically based on battery criticality.
-2. **Continuous Double Auction (CDA) Order Matching:** A low-latency C++20 engine aggregates order books via UDP, dynamically computing the market-clearing **Spot Price** (e.g., ₹5.50/kWh). Sellers earn **+120% more** than feed-in tariffs, while buyers save **31%** compared to grid retail tariffs.
-3. **Physical Micro-Grid Routing:** Solid-state relay modules switch physical DC lines to route real electric current from the seller’s battery/solar array directly to the buyer’s load.
-4. **Zero-Trust Hardware TRNG Settlement:** Unrepeatable environmental entropy generated from optical/sensor noise generates un-forgeable nonces (`TX_ID`), securing every transaction without computational overhead.
+1. **Automated Market Makers (AMM) with Battery Degradation Modeling:** Each household is equipped with an ESP32 trading node paired with an INA219 bidirectional power sensor. Bids and asks are priced dynamically based on battery State-of-Charge (SoC) and a Levelized Cost of Storage ($C_{\text{deg}}$) floor. This guarantees prosumers never trade stored battery power at an economic loss.
+2. **Continuous Double Auction (CDA) with DISCOM Liquidity Corridor:** A low-latency C++20 engine aggregates order books via UDP, dynamically computing the market-clearing **Spot Price** (e.g., ₹5.50/kWh). Sellers earn **+120% more** than feed-in tariffs, while buyers save **31%** compared to grid retail tariffs. To eliminate order book starvation at night, the DISCOM acts as the **Liquidity Provider of Last Resort** with synthetic standing limit orders at ₹2.50 (Floor) and ₹8.00 (Ceiling).
+3. **Physical Micro-Grid Routing with Inrush Protection:** Solid-state relay modules and series ceramic power resistors ($10\,\Omega$) physically clamp inrush currents safely to ~300 mA while dynamically routing real DC power between matched prosumers.
+4. **Zero-Trust TRNG Settlement & Proof-of-Energy-Transfer (PoET):** Unrepeatable environmental entropy generated from optical/sensor noise generates un-forgeable nonces (`TX_ID`), sealing transactions without blockchain overhead. Final financial settlement uses a two-phase commit verified against both nodes' INA219 energy telemetry.
 
 ---
 

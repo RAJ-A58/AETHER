@@ -59,6 +59,7 @@ To guarantee bank-grade zero-trust security without the transaction fees, comput
 AETHER/
 ├── docs/                               # Hackathon proposals, pitch decks & guides
 │   ├── README.md                       # Documentation index
+│   ├── SYSTEM_DEFENSE_AND_EDGE_CASES.md# Flaw analysis, inrush safety & quant defense
 │   ├── TEAM_ONBOARDING_GUIDE.md        # Technical architecture manual & packet specs
 │   ├── PHYSICAL_ENTROPY_GENERATOR.md   # Zero-trust TRNG hardware & SIMD spec
 │   ├── Round_1_Idea_Submission_Deck.md # 6–8 Slide pitch deck for Round 1

@@ -8,6 +8,7 @@ This folder contains all research, pitch decks, proposals, and official hackatho
 
 | File | Purpose | Description |
 |---|---|---|
+| [`SYSTEM_DEFENSE_AND_EDGE_CASES.md`](file:///E:/Scix_Hackathon/docs/SYSTEM_DEFENSE_AND_EDGE_CASES.md) | **System Defense Dossier** | Comprehensive breakdown of 5 core system flaws (inrush current, battery degradation, thin liquidity, oracle problem, single point of failure) and proven solutions. |
 | [`TEAM_ONBOARDING_GUIDE.md`](file:///E:/Scix_Hackathon/docs/TEAM_ONBOARDING_GUIDE.md) | **System Architecture Manual** | Complete subsystem breakdown, dataflow diagram, JSON-over-UDP packet contracts, circuit pinouts, and judge Q&A. |
 | [`PHYSICAL_ENTROPY_GENERATOR.md`](file:///E:/Scix_Hackathon/docs/PHYSICAL_ENTROPY_GENERATOR.md) | **Entropy Engine Spec** | Deep-dive documentation on AVX2 SIMD whitening, optical/acoustic harvesting, nonce generation, and anti-replay protocols. |
 | [`Round_1_Idea_Submission_Deck.md`](file:///E:/Scix_Hackathon/docs/Round_1_Idea_Submission_Deck.md) | **Pitch Deck (6–8 Slides)** | Ready-to-use slide-by-slide copy, visuals, metrics, and talking points for Round 1 submission on the SciX app. |
