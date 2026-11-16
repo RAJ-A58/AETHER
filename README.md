@@ -16,8 +16,8 @@ To guarantee bank-grade zero-trust security without the transaction fees, comput
 ---
 
 ## 2. The Problem & Solution
-* **The Broken Economics of Net-Metering:** Prosumers dump excess solar power back to the state DISCOM at rock-bottom feed-in tariffs (e.g., **₹2.82/kWh**), while direct neighbors buy that exact electricity at premium peak rates (e.g., **₹10.50/kWh**).
-* **The AETHER Solution:** Autonomous edge nodes running Automated Market Maker (AMM) logic dynamically quote bids/asks into a Continuous Double Auction (CDA) matching engine. Energy is traded directly between neighbors at a fair clearing spot price (e.g., **₹5.50/kWh**), delivering a win-win: sellers earn **+120% more**, while buyers save **31%**. Solid-state relays physically steer the negotiated DC power across the micro-grid mesh.
+* **The Broken Economics of Net-Metering:** Prosumers dump excess solar power back to the state DISCOM at rock-bottom feed-in tariffs (e.g., **₹2.82/kWh** under MERC Case No. 226 of 2022), while direct neighbors buy that exact electricity at premium peak rates (e.g., **₹10.50/kWh** under MSEDCL retail slabs). Prosumers forfeit over 73% of retail value to the **₹7.68/kWh spread**.
+* **The AETHER Solution:** Autonomous edge nodes running Automated Market Maker (AMM) logic dynamically quote bids/asks into a Continuous Double Auction (CDA) matching engine. Energy is traded directly between neighbors at a fair clearing spot price (e.g., **₹6.00/kWh**), delivering a win-win: sellers earn **+112% more**, while buyers save **42%**. Solid-state relays physically steer the negotiated DC power across the micro-grid mesh.
 
 ---
 
@@ -57,12 +57,13 @@ To guarantee bank-grade zero-trust security without the transaction fees, comput
 
 ```
 AETHER/
-├── docs/                               # Hackathon proposals, pitch decks & guides
+├── docs/                               # Official proposals, pitch decks & guides
+│   ├── AETHER_SciX_Round1_Final_Submission.pdf # Official 8-slide watermark-free submission PDF
 │   ├── README.md                       # Documentation index
 │   ├── SYSTEM_DEFENSE_AND_EDGE_CASES.md# Flaw analysis, inrush safety & quant defense
 │   ├── TEAM_ONBOARDING_GUIDE.md        # Technical architecture manual & packet specs
 │   ├── PHYSICAL_ENTROPY_GENERATOR.md   # Zero-trust TRNG hardware & SIMD spec
-│   ├── Round_1_Idea_Submission_Deck.md # 6–8 Slide pitch deck for Round 1
+│   ├── Round_1_Idea_Submission_Deck.md # 8-Slide pitch deck specification
 │   ├── Round_1_Submission_Proposal.md  # Detailed technical & economic proposal
 │   └── SciX India Hackathon.pdf        # Official event handbook
 ├── src/                                # Project codebase
@@ -84,8 +85,8 @@ AETHER/
 
 ---
 
-## 7. Team Execution (4-Person Split)
-* **Member 1 (Core Exchange Engine - C++20):** Continuous Double Auction matching engine & UDP networking.
-* **Member 2 (Cryptography & Zero-Trust - C++):** Physical entropy generator integration & nonce-based settlement.
-* **Member 3 (Embedded Systems & Quant Pricing - ESP32):** INA219 telemetry driver & AMM edge bidding algorithms.
-* **Member 4 (Power Electronics & UI):** Tabletop circuit assembly, relay routing, and dark-mode terminal dashboard.
+## 7. Team DEADCODE (Visvesvaraya National Institute of Technology - VNIT Nagpur)
+* **Raj Patil** (VNIT Nagpur) — System Architecture, Firmware & Coordination
+* **Nakul Yawalkar** (VNIT Nagpur) — Core Exchange Engine (C++20) & Network Sockets
+* **Soumik Das** (VNIT Nagpur) — Cryptography, TRNG Nonce Integration & Security
+* **Laksh Kachure** (VNIT Nagpur) — Power Electronics, Circuit Rig & Trading Terminal UI

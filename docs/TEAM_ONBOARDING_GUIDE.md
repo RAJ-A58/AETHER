@@ -7,7 +7,7 @@ Welcome to the project! This document outlines the core architecture of **AETHER
 
 ## 1. The 30-Second Elevator Pitch
 
-> *"AETHER replaces broken net-metering (where prosumers sell solar to the grid at ₹2.50/kWh and buy back at ₹8.00/kWh) with an autonomous peer-to-peer energy exchange. Our ESP32 smart meters use Automated Market Maker (AMM) algorithms to trade power directly with neighbors at ~₹5.50/kWh. To prevent trade spoofing without using slow, expensive blockchains, we use a C++ physical entropy engine that captures real-world hardware noise to sign every micro-trade with an un-forgeable cryptographic nonce."*
+> *"AETHER replaces broken net-metering (where prosumers sell solar to the grid at ₹2.82/kWh and buy back at ₹10.50/kWh) with an autonomous peer-to-peer energy exchange. Our ESP32 smart meters use Automated Market Maker (AMM) algorithms to trade power directly with neighbors at ~₹6.00/kWh. To prevent trade spoofing without using slow, expensive blockchains, we use a C++ physical entropy engine that captures real-world hardware noise to sign every micro-trade with an un-forgeable cryptographic nonce."*
 
 ---
 

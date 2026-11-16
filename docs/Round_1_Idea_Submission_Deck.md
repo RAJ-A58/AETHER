@@ -1,116 +1,132 @@
-# Zero-Trust Autonomous P2P Micro-Grid & Energy Derivatives Exchange
-## SciX India Hackathon — Round 1: Idea Submission Pitch Deck (6–8 Slides)
-**Category:** Engineering (Energy, Electronics, Smart Systems)  
-**Track:** SciX India Hackathon (Organized by SciAstra Labs · Innovation Partner: CiiA)  
+# AETHER: Autonomous Energy Trading via Hardware Entropy Routing
+## SciX India Hackathon — Round 1: Official 8-Slide Pitch Deck Specification
+**Category:** Engineering (Smart Systems, Electronics & Energy)  
+**Team Name:** DEADCODE  
+**Team Members:** Raj Patil, Nakul Yawalkar, Soumik Das, Laksh Kachure  
+**Institution:** Visvesvaraya National Institute of Technology (VNIT Nagpur)  
+**Innovation Partner:** CiiA (Consortium of Indo-Israel Alliances)  
 **Target Exhibition:** CiiA-6 National Science Exhibition, Nehru Science Centre, Mumbai  
-**Hardware Budget:** ₹2,646  
+**Hardware Budget (Prototype BOM):** ₹2,646  
 
 ---
 
-### Slide 1: Title & Hook
-* **Title:** Zero-Trust Autonomous P2P Micro-Grid & Energy Derivatives Exchange
-* **Subtitle:** Decentralized Real-Time Energy Trading Powered by Environmental Hardware Entropy
-* **Track & Category:** Engineering (Energy, Electronics, Smart Systems)
-* **Team:** [Team Name] (1–4 Members)
-* **One-Line Hook:** *"Transforming passive rooftop solar prosumers into autonomous micro-utilities with high-frequency continuous double auctions and zero-trust cryptographic settlement."*
-* **Visual Elements:**
-  - Modern dual-tone graphic: On the left, solar panels and battery storage; on the right, high-frequency order book depth chart.
-  - Sub-badges: `₹2,646 Ultra-Low-Cost Node`, `10ms Hardware Telemetry`, `Zero-Trust Physical TRNG`, `CiiA-6 Ready`.
+### Slide 1: Title & Team Credentials
+* **Main Title:** AETHER: Autonomous Energy Trading via Hardware Entropy Routing
+* **Subtitle:** A Zero-Trust Autonomous P2P Micro-Grid & Energy Derivatives Exchange
+* **Track:** SciX India Hackathon · Stage 1 · Engineering Track
+* **Team Credentials:** `[DEADCODE | RAJ PATIL, NAKUL YAWALKAR, SOUMIK DAS, LAKSH KACHURE | VISVESVARAYA NATIONAL INSTITUTE OF TECHNOLOGY]`
+* **4 Metric Highlights:**
+  - `₹2,646 Hardware BOM` (Ultra-frugal tabletop testbed)
+  - `10ms INA219 Telemetry` (Sub-second power sensing)
+  - `Zero-Trust Physical TRNG` (Hardware chaos nonces)
+  - `CiiA-6 Track` (Nehru Science Centre, Mumbai)
 
 ---
 
-### Slide 2: The Problem — The Broken Economics of Net-Metering
-* **Headline:** Static Net-Metering Penalizes Prosumers & Destabilizes Local Grids
-* **Key Pain Points:**
-  1. **Severe Price Asymmetry (DISCOM Arbitrage):**
-     - Households dump excess solar back to the state grid at depressed feed-in tariffs (e.g., **₹2.50/kWh**).
-     - Immediate next-door neighbors buy that exact same grid power at peak tariff (e.g., **₹8.00/kWh**).
-     - Prosumers lose 68% of their potential energy value; consumers pay maximum rates.
-  2. **Grid Congestion & Transformer Stress:**
-     - Uncoordinated electric vehicle (EV) charging and rooftop solar peaks create reverse power flows and local transformer overloading without dynamic price signals.
-  3. **Vulnerability to Replay & Spoofing Attacks in Decentralized Trading:**
-     - Emerging P2P energy projects rely either on slow/expensive central blockchains (prohibitive gas fees for micro-Watt hours) or unverified simulated meters vulnerable to spoofed transactions.
-* **Callout Metric:** *Over 70% of rooftop solar owners in India experience >5-year ROI periods due to unfavorable DISCOM feed-in rates.*
+### Slide 2: The Problem — The Broken Economics of Solar Net-Metering in India (Relevance — 20%)
+* **Headline:** The Broken Economics of Rooftop Solar Net-Metering in India
+* **Summary:** Export buyback sits far below retail import prices, so local solar surplus is undervalued and evening grid peaks stay unmanaged.
+* **Card 1 (The ₹7.68 Tariff Gap — Export Buyback vs. Peak Retail Import):**
+  - Export buyback is **₹2.82/kWh** vs. peak retail import at **₹10.50/kWh**.
+  - Prosumers forfeit about 73% of retail value to the spread (calculated from these two rates).
+  - Prosumers lose 73% of generation value, extending solar-plus-storage payback to 7–9 years.
+* **Card 2 (Grid Congestion & Transformer Stress — Local Feeder and Transformer Strain):**
+  - Simultaneous uncoordinated evening EV charging creates severe peak loads on local step-down transformers.
+  - Midday solar backfeed destabilizes local feeder lines when no local price signal exists.
+* **Statutory Citation:**
+  - *Source: MERC Tariff Order (Case No. 226 of 2022) & MSEDCL Retail Tariff Schedule FY 2024–25; Central Electricity Authority (CEA) Technical Reports.*
 
 ---
 
-### Slide 3: The Solution — Autonomous P2P Energy Derivatives Exchange
-* **Headline:** Decentralized Micro-Grid with Continuous Double Auction & Physical Settlement
-* **Core Solution Architecture:**
-  1. **Autonomous Bidding Agents (Edge Intelligence):**
-     - Low-cost ESP32 smart meters calculate battery State-of-Charge (SoC), instantaneous solar generation, and load curves in real time.
-     - Automated Market Maker (AMM) logic automatically broadcasts bids and asks without manual human intervention.
-  2. **Sub-Second Continuous Double Auction (CDA):**
-     - A local C++20 matching engine crosses order books to clear trades at fair clearing spot prices (e.g., **₹5.50/kWh**), creating a win-win: sellers earn +120% more, buyers save 31%.
-  3. **Physical Micro-Grid Routing:**
-     - Solid-state relay modules actuate physical copper paths over a local DC distribution mesh to transfer power directly between matched nodes.
-* **Visual Diagram:**
-  - `House 1 (Surplus Solar) -> AMM Ask: ₹5.20` ➔ `[CDA Engine @ ₹5.50/kWh]` ⬅ `House 2 (Depleted Battery) -> AMM Bid: ₹5.80`
-  - Output: `Relay Closes -> Real DC Current Flows`.
+### Slide 3: What Already Exists & Why It Fails (Novelty — 25%)
+* **Headline:** Current Alternatives Fail at the Micro-Grid Edge
+* **Summary:** Three incumbent paradigms each miss the same need: fast, low-cost, physically verified trades between neighbors.
+* **Card 1 (Traditional Net-Metering — DISCOM Monopoly):**
+  - Static monthly credits and zero dynamic pricing.
+  - Prosumers are economically penalized for adding battery storage. Pricing: Fixed by regulation.
+* **Card 2 (Blockchain P2P — Ledger-Based Trading):**
+  - High Gas Fees: Public blockchain fees (₹5–₹50 per tx) dwarf micro-energy packets (50 Wh worth ~₹0.30).
+  - 12s–15m block confirmation latencies cannot support real-time physical relay switching. Pricing: Tokenized auctions.
+* **Card 3 (Static Bilateral Contracts — Rigid Fixed Rates):**
+  - Fixed contracts cannot adapt dynamically to sudden cloud cover, battery drain, or EV charging spikes. Pricing: Rigid contractual.
+* **Takeaway:** *The market is trapped between slow, expensive blockchain ledgers and rigid utility monopolies.*
 
 ---
 
-### Slide 4: Deep Tech Novelty — Zero-Trust TRNG Cryptographic Settlement
-* **Headline:** Bank-Grade Trade Verification Using Environmental Hardware Noise
-* **Why Traditional Cryptography Fails at the Micro-Grid Edge:**
-  - Standard pseudo-random number generators (PRNG) are deterministic and vulnerable to state extraction and transaction replay attacks.
-  - Heavy proof-of-work/proof-of-stake blockchains require massive computation and introduce unacceptable latency (seconds to minutes) for real-time grid switching.
-* **Our Proprietary Innovation (`physical-entropy-generator`):**
-  - **Hardware Entropy Harvesting:** Captures unrepeatable physical noise (atmospheric optical fluctuation, thermal noise, sensor jitter via `entropy_core.cpp`).
-  - **Cryptographic Nonce Generation:** Extracted raw physical entropy is conditioned into high-entropy cryptographic nonces.
-  - **Zero-Trust Settlement:** Every micro-trade (e.g., 50Wh packet) is stamped with an environmental hardware nonce as an un-forgeable Transaction ID (`TX_ID`), eliminating replay attacks with zero gas fees and sub-50ms clearance.
-
----
-
-### Slide 5: System Architecture & Technical Pipeline
-* **Headline:** From 10ms Telemetry to Micro-Second Matching and Physical Power Flow
+### Slide 4: Proposed Solution — AETHER Architecture (Solution Overview)
+* **Headline:** Autonomous Micro-Grid Commodities Exchange & Physical Power Routing
 * **4-Stage Pipeline:**
-  1. **Telemetry Layer (Senses):**
-     - CJMCU-219 INA219 bidirectional current/voltage sensors sample 12-bit bus voltage and shunt current every 10ms.
-  2. **Autonomous Agent Layer (Brain):**
-     - ESP32 microcontrollers run localized AMM quant algorithms (`battery < 40%` triggers dynamic BUY; `surplus solar` triggers SELL).
-  3. **High-Performance Matching Engine (Market):**
-     - High-efficiency C++20 engine handling price-time priority Continuous Double Auctions over ultra-low-latency UDP.
-  4. **Physical Settlement & Safety (Muscle):**
-     - Multi-channel opto-isolated relay modules dynamically open/close DC bus tie-switches to deliver the exact traded energy block with overload cutoffs.
-* **Architecture Diagram / Dataflow:**
-  - `[INA219 Sensors]` ➔ `[ESP32 AMM Agent]` ➔ `[UDP Order Packet]` ➔ `[C++20 CDA Matcher + TRNG Nonce]` ➔ `[Relay Trigger & LCD Depth Display]`
+  - `SENSE ➔ 10 ms INA219 Sensing`: Edge nodes read current and voltage every 10 ms.
+  - `QUOTE ➔ ESP32 AMM Quoting`: Each node posts bids and asks from battery-aware floors.
+  - `MATCH ➔ C++20 CDA Matcher @ ₹6.00/kWh`: Continuous double auction with price-time priority.
+  - `ROUTE ➔ Solid-State Relays Route DC Current`: Matched trades switch power between peers on the DC bus.
+* **The Win-Win Clearing Corridor (Spot Price: ₹6.00/kWh):**
+  - **Prosumer Seller:** Earns ₹6.00/kWh (+112% gross uplift over the ₹2.82/kWh feed-in rate).
+  - **Neighbor Buyer:** Pays ₹6.00/kWh (42% gross savings vs. the ₹10.50/kWh utility retail tariff).
+  - **Utility Partner:** DISCOM operates as the licensed settlement clearinghouse, capturing a 5% wheeling fee on P2P volume while shedding peak transformer strain.
 
 ---
 
-### Slide 6: Feasibility, Budget & Hardware Implementation
-* **Headline:** Industrial-Grade Feasibility Proved on an Ultra-Frugal ₹2,646 Bill of Materials
-* **Itemized Bill of Materials (BOM):**
-  | Component | Specification & Role | Qty | Unit Cost | Total |
-  |---|---|---|---|---|
-  | **Robocraze ESP32 Dual-Core** | Autonomous Trading Nodes (Wi-Fi/FreeRTOS) | 3 | ₹469 | ₹1,408 |
-  | **CJMCU-219 INA219 Sensors** | I2C Bidirectional Voltage/Current Telemetry | 3 | ₹86 | ₹258 |
-  | **Opto-Isolated Relay Module + LCDs** | Physical Power Routing & Real-Time Local Terminals | 1 set | ₹380 | ₹380 |
-  | **Micro-Grid Source & Loads** | 6V Solar PV Cells + Ceramic Load Resistors + Acrylic Base | 1 set | ₹600 | ₹600 |
-  | **Total Project Cost** | **Complete 3-House Autonomous Grid Demo** | — | — | **₹2,646** |
-* **Why This Wins Round 1 & Round 2:**
-  - Hackathon judges prioritize **tangible hardware prototypes** over pure software mockups.
-  - Extreme capital efficiency: ₹2,646 prototype cost proves commercial viability for Indian rural & urban micro-grids.
+### Slide 5: Engineering & Quant Modeling (Feasibility — 25%)
+* **Headline:** Battery Degradation-Aware AMM & the DISCOM Liquidity Corridor
+* **Card 1 (Battery Degradation Protection):**
+  - Formula:
+    $$Ask_{\text{floor}} = P_{\text{feed-in}} + C_{\text{degradation}} + \Delta_{\text{SoC}}$$
+  - Where:
+    $$C_{\text{degradation}} = \frac{\text{Battery Pack Replacement Cost}}{\text{Rated Lifecycle Cycles} \times \text{Usable Capacity}}$$
+  - Direct solar surplus quotes down to ₹3.50/kWh ($C_{\text{deg}} = 0$).
+  - Stored battery power dynamically enforces a ₹4.80/kWh reserve floor.
+  - **Guaranteed Prosumer Margins:** Prosumers are mathematically protected from trading stored battery energy below physical replacement wear (~₹2.00/kWh).
+* **Card 2 (DISCOM Liquidity Corridor — Market Maker of Last Resort):**
+  - **Standing Synthetic Orders:** A floor at ₹2.82/kWh absorbs surplus; a ceiling at ₹10.50/kWh supplies deficits.
+  - **Uninterrupted Supply:** Eliminates thin-market liquidity freezes in small micro-grids, ensuring zero power disruptions.
+  - **Utility-Friendly Model:** DISCOM collects a 5% wheeling fee on all P2P trades while avoiding costly transformer upgrades.
 
 ---
 
-### Slide 7: Interactive Live Demo Script (Designed for CiiA-6 Exhibition)
-* **Headline:** High-Impact, Sensory 4-Phase Live Demonstration for Jury & Investors
-* **The 4-Phase Interactive Flow:**
-  - **Phase 1 — Grid Equilibrium:** 3 tabletop houses generate balanced solar power. LCD displays and dark-mode terminal show steady-state telemetry and a quiet order book.
-  - **Phase 2 — The External Shock (Judge Interaction):** The judge is invited to physically place their hand over House 1’s solar panel, instantly simulating cloud cover / storm blackout.
-  - **Phase 3 — Autonomous Market Reaction:** Telemetry detects instantaneous voltage drop. House 1’s ESP32 autonomously floods the order book with emergency BUY bids. The depth chart spikes in real time.
-  - **Phase 4 — Instant Physical Settlement:** CDA matching engine pairs House 1 with House 3 (battery surplus). The C++ physical entropy core stamps the nonced trade (`TX_ID`), the relay snaps audibly, and House 1’s lights remain on seamlessly via House 3’s power transfer.
+### Slide 6: Deep-Tech Novelty — Zero-Trust TRNG Settlement (Novelty — 25%)
+* **Headline:** Bank-Grade Settlement Powered by Environmental Hardware Chaos
+* **Subtitle:** Hardware-accelerated True Random Number Generation for sub-millisecond, zero-gas trade settlement.
+* **Card 1 (Physical Entropy Harvesting — CMOS Optical Shot Noise & Acoustic Static):**
+  - Captures microscopic, non-deterministic environmental noise through a custom C++ AVX2 SIMD core (`entropy_core.cpp`).
+  - **Physical Non-Determinism:** Anchored in physical quantum photon arrival and thermal fluctuations, making seed prediction mathematically impossible.
+* **Card 2 (39-Microsecond Benchmark — 921 KB Frames ➔ 32-Byte Seed):**
+  - **Ultra-Low Latency:** Distills full raw sensor frames into a 32-byte cryptographic seed in ~39 µs (8,800× faster than Python).
+  - **SIMD Vector Pipeline:** Utilizes Intel AVX2 256-bit registers (`_mm256_xor_si256`, 64-bit vector lane permutation, and modular addition).
+* **Card 3 (Anti-Replay Nonce Engine — TX_ID = HMAC-SHA256(EntropySeed, TradeData)):**
+  - **Replay Immunity:** Each cleared trade is stamped with an un-forgeable single-use Transaction ID verified against hardware sequence registers.
+  - **Zero Gas Overhead:** Replaces slow, expensive blockchains with microsecond physical settlement and ₹0.00 transaction fees.
+* **Zero-Trust Edge Advantage:**
+  - *Eliminates distributed ledger gas bloat (₹0.00 vs ₹5–₹50) and 15-minute block delays, enabling bank-grade physical settlement directly at the micro-grid edge.*
 
 ---
 
-### Slide 8: Market Impact, Scalability & Roadmap
-* **Headline:** Transforming ₹8.00 vs ₹2.50 Disparity into a Scalable B2B Clean-Tech Venture
-* **Target Market & Scalability:**
-  - **Gated Communities & Commercial Parks:** 50–500 prosumer clusters trading energy locally without overloading substation transformers.
-  - **Industrial Parks & Rural Micro-Grids:** Eliminates diesel generator dependency during peak tariff slots.
-  - **DISCOM Integration:** DISCOMs act as market operators taking a 5% transaction clearing fee while shedding peak grid balancing costs.
-* **Roadmap to CiiA-6 Mumbai (Nehru Science Centre):**
-  - **Round 1 (Nov 2026):** Architecture validation & idea deck submission.
-  - **Round 2 (Dec 2026 – Jan 2027):** 3-node physical tabletop hardware assembly, C++20 matching engine benchmarking, 3–5 min video demo.
-  - **CiiA-6 Grand Finale (Feb 2027):** Live interactive exhibition booth & Shark-Tank-style investor pitch for the ₹6.5 Lakh prize pool.
+### Slide 7: Hardware Feasibility & 4-Week Prototype Work (Feasibility — 25%)
+* **Headline:** Frugal Hardware: ₹2,646 BOM & Early Prototype Work
+* **Itemized Bill of Materials (100% Off-The-Shelf in India):**
+  | Item | Cost (₹) |
+  |---|---|
+  | 3× Robocraze ESP32 dual-core dev boards | 1,408 |
+  | 3× CJMCU-219 INA219 current sensors | 258 |
+  | 4-channel 5 V relay module + LCDs | 380 |
+  | Solar PV cells + 10 Ω inrush ceramic resistors + base | 600 |
+  | **Total hardware prototype** | **₹2,646** |
+* **Core Architecture Validated (Already Tested):**
+  - C++ AVX2 entropy core (`entropy_core.cpp`) is already compiled, tested, and benchmarked at 39 µs for seed generation.
+* **4-Week Prototype Sprint:**
+  - **Week 1–2:** Tabletop DC bus assembly, 10 Ω inrush ceramic resistor integration & INA219 calibration.
+  - **Week 3–4:** UDP socket order matching, physical relay DC routing, and live demonstration video.
+
+---
+
+### Slide 8: National Impact Alignment & The 4-Phase Live Demonstration (Impact — 20%)
+* **Headline:** National Impact Alignment & the 4-Phase Live Demonstration
+* **National Policy Alignment (PM Surya Ghar: Muft Bijli Yojana):**
+  - Directly aligns with India's national mandate targeting **1 Crore rooftop solar installations**.
+  - **Turnkey Micro-Grid Solution:** Engineered for rapid deployment across gated residential societies, commercial IT parks, and rural solar micro-grids.
+  - **Prosumer Value Capture:** Converts passive solar owners into active micro-utilities, reducing payback times from 9 years to under 4 years.
+* **CiiA-6 Live Demo Script:**
+  1. **Equilibrium:** 3 tabletop houses generate balanced solar power; quiet order book on trading terminal.
+  2. **The Grid Shock:** Evaluator physically places their hand over House 1's solar cell, simulating a sudden storm blackout.
+  3. **Market Reaction:** Voltage drops; House 1's ESP32 autonomously broadcasts aggressive BUY orders into the C++ engine.
+  4. **Physical Settlement:** Engine matches House 1 & 3; TRNG nonce signs trade; physical relay snaps audibly; House 1 lights stay powered via House 3's stored energy.
